@@ -1,4 +1,551 @@
-<!doctype html><meta charset="utf-8">
-<title>It works!</title>
-<h1>Hello from GitHub Pages 🎉</h1>
-<p>If you see this, Pages is working.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Projects – Fei Ding</title>
+  <meta name="description" content="PI/Co‑PI/NREL PI on 17 competitive FOA projects advancing DER, microgrid, and distribution grid control technologies." />
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --card: #12141a;
+      --text: #e9ecf1;
+      --muted: #98a2b3;
+      --accent: #7cd1ff;
+      --border: #212633;
+      --chip: #1b2230;
+      --link: #9bd0ff;
+      --shadow: 0 1px 0 rgba(255,255,255,0.04) inset,
+                 0 8px 30px rgba(0,0,0,0.35);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fb;
+        --card: #ffffff;
+        --text: #0c1220;
+        --muted: #52607a;
+        --accent: #0ea5e9;
+        --border: #e6e9f0;
+        --chip: #f0f7ff;
+        --link: #0b72b9;
+        --shadow: 0 1px 0 rgba(0,0,0,0.03) inset,
+                   0 10px 30px rgba(12, 18, 32, 0.06);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(124,209,255,0.18), transparent 40%),
+                  radial-gradient(800px 600px at 110% 20%, rgba(14,165,233,0.18), transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 20px 80px; }
+
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: saturate(120%) blur(10px);
+      background: color-mix(in oklab, var(--bg) 75%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    header .bar { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display:flex; gap:16px; align-items:center; }
+    .brand { font-weight: 700; letter-spacing: 0.2px; }
+    .chip {
+      display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px;
+      background: var(--chip); border:1px solid var(--border); font-size:12.5px; color:var(--muted);
+    }
+
+    .hero { margin-top: 22px; margin-bottom: 12px; }
+    .hero h1 { font-size: clamp(28px, 4vw, 38px); line-height: 1.15; margin: 0 0 10px; }
+    .hero p { margin: 0; color: var(--muted); max-width: 75ch; }
+
+    .controls { margin: 18px 0 28px; display:flex; flex-wrap:wrap; gap:10px; }
+    .search { flex: 1 1 360px; display:flex; align-items:center; gap:10px; padding:10px 12px; border:1px solid var(--border); border-radius:12px; background: var(--card); box-shadow: var(--shadow); }
+    .search input { flex:1; border:none; outline:none; background:transparent; color:var(--text); font-size: 15px; }
+
+    .pills { display:flex; gap:8px; flex-wrap: wrap; }
+    .pill { cursor:pointer; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background: var(--card); color: var(--muted); font-size:12.5px; box-shadow: var(--shadow); }
+    .pill.active { color: var(--text); border-color: color-mix(in oklab, var(--accent) 60%, var(--border)); box-shadow: 0 0 0 2px color-mix(in oklab, var(--accent) 25%, transparent); }
+
+    .list { display:grid; grid-template-columns: 1fr; gap:14px; }
+
+    details.project { border:1px solid var(--border); border-radius: 14px; background: var(--card); box-shadow: var(--shadow); overflow:hidden; }
+    summary {
+      list-style: none; cursor: pointer; padding: 16px 18px; display:grid; grid-template-columns: auto 1fr auto; align-items: start; gap:14px;
+    }
+    summary::-webkit-details-marker { display:none; }
+    .num { font-variant-numeric: tabular-nums; opacity:.7; }
+    .title { font-weight: 650; }
+    .meta { font-size: 13px; color: var(--muted); }
+    .funds { font-weight: 600; color: var(--accent); white-space: nowrap; }
+
+    .content { padding: 0 22px 18px 22px; display:grid; gap:10px; }
+    .label { font-weight: 600; }
+    ul, ol { margin: 6px 0 0 1.25rem; }
+    .teams { margin-top: 8px; }
+
+    footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
+
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="brand">Fei Ding · Research Projects</div>
+      <div class="chip" id="countChip" aria-live="polite">17 projects · 2018–2028</div>
+      <div class="chip">Total: $37.987M+ · To NREL: $20.25M+</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Competitive FOA Projects on DER, Microgrid, and Distribution Grid Controls</h1>
+      <p>
+        As PI/Co‑PI/NREL PI, I have won <strong>17</strong> competitive FOA proposals totaling <strong>$37.987&nbsp;million+</strong> in funding, with <strong>$20.25&nbsp;million+</strong> to NREL. Projects are shown in order of start time (newest → oldest).
+      </p>
+    </section>
+
+    <section class="controls" aria-label="Filters and search">
+      <label class="search" for="q">
+        <span class="sr-only">Search projects</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 21l-4.2-4.2m1.2-5.3a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <input id="q" placeholder="Search title, team, scope, funder…" autocomplete="off" />
+      </label>
+      <div class="pills" role="group" aria-label="Filter by start year" id="yearPills"></div>
+    </section>
+
+    <section class="list" id="projectList">
+
+      <!-- 2026 NEW -->
+      <details class="project" data-year="2026" open>
+        <summary>
+          <div class="num">1</div>
+          <div>
+            <div class="title">PI · <em>Integrated Control Room of Future</em></div>
+            <div class="meta">NREL Transformational LDRD · 2026–2028 · Funding TBD</div>
+          </div>
+          <div class="funds">TBD</div>
+        </summary>
+        <div class="content">
+          <div><span class="label">NREL’s scope:</span> Develop innovative control room of future platform that adopts trustworthy AI and advanced digital twin technologies for next‑generation grid operations. Target at developing cross‑functional R&D capability, multi‑sector organizational partnerships, and positioning NREL as a national leader in control room modernization.</div>
+        </div>
+      </details>
+
+      <!-- 2025 NEW -->
+      <details class="project" data-year="2025">
+        <summary>
+          <div class="num">2</div>
+          <div>
+            <div class="title">PI · <em>Grid Reliability and Resilience under Load Growth</em></div>
+            <div class="meta">DOE Office of Electricity · 2025–2026 · $400k federal</div>
+          </div>
+          <div class="funds">$400k</div>
+        </summary>
+        <div class="content">
+          <div><span class="label">NREL’s scope:</span> Model and study the techno‑economic impact of load growth on distribution grid and develop affordable technologies to enhance grid reliability and resilience, considering both grid‑edge electrification and increasing integration of data centers.</div>
+        </div>
+      </details>
+
+      <!-- 2024 (1) -->
+      <details class="project" data-year="2024">
+        <summary>
+          <div class="num">3</div>
+          <div>
+            <div class="title">Co‑PI · <em>MOON: A Modular Multi‑Application Multi‑Resolution Sensor Fusion Optimization Architecture for Transmission System Operation</em></div>
+            <div class="meta">DOE SETO FY25 Lab Call · 2024–2027 · Team: NREL, NYU, ORNL, EPRI, NYPA, Orange &amp; Rockland</div>
+          </div>
+          <div class="funds">$3M</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> NREL, New York University, Oak Ridge National Laboratory, EPRI, New York Power Authority, Orange &amp; Rockland.</div>
+        </div>
+      </details>
+
+      <!-- 2024 (2) -->
+      <details class="project" data-year="2024">
+        <summary>
+          <div class="num">4</div>
+          <div>
+            <div class="title">NREL PI · <em>MODERNISE: Modernizing Operation and Decision‑Making Tools Enabling Resource Management in Stochastic Environment</em></div>
+            <div class="meta">DOE SETO · 2024–2027 · Lead: Iowa State University · $3M federal + $1.1M cost share · $350k to NREL · Team: ISU, NREL, Hitachi ABB, Siemens, AES Indiana</div>
+          </div>
+          <div class="funds">$3M + $1.1M</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> Iowa State University, NREL, Hitachi ABB, Siemens, AES Indiana.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Develop methods to quantify uncertainty about DER providing flexibility.</li>
+              <li>Develop co‑simulation model and integrate with Hitachi ADMS/DERMS platforms to validate the DER optimization technology.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2024 (3) -->
+      <details class="project" data-year="2024">
+        <summary>
+          <div class="num">5</div>
+          <div>
+            <div class="title">NREL PI · <em>CyberCARED – Northeast University Cybersecurity Center for Advanced and Resilient Energy Delivery</em></div>
+            <div class="meta">DOE CESER · 2024–2027 · Lead: University of Connecticut · $2.5M federal + $1.1M cost share · $175k to NREL</div>
+          </div>
+          <div class="funds">$2.5M + $1.1M</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> University of Connecticut, NREL, University of Rhode Island, University of Massachusetts Lowell, University of Vermont, Central Connecticut State University, New York University, Raytheon Technologies, Eversource Energy, Gridmetrics.</div>
+          <div><span class="label">NREL’s scope:</span> Develop learning‑based DER controls to mitigate the impact of cyberattacks on distribution grid operations.</div>
+        </div>
+      </details>
+
+      <!-- 2024 (4) -->
+      <details class="project" data-year="2024">
+        <summary>
+          <div class="num">6</div>
+          <div>
+            <div class="title">NREL PI · <em>An Innovative Suite of Physics‑Informed Learning Tools for Real‑Time DER System Data Analytics</em></div>
+            <div class="meta">DOE CESER · 2024–2027 · Lead: ORNL · $3.7M federal · $917k to NREL</div>
+          </div>
+          <div class="funds">$3.7M</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> Oak Ridge National Laboratory, NREL, Penn State University, University of Connecticut, Eversource Energy, Microsoft.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Develop a high‑fidelity cyber‑physical system model for DER operations considering the existence of DER aggregator and DER management system.</li>
+              <li>Develop a graph theory‑based and machine‑learning‑enhanced cybersecurity vulnerability analysis method to quantify the OT‑level vulnerability of DERs.</li>
+              <li>Develop a learning‑based distributed DER control to mitigate cyber attack impact.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2024 (5) -->
+      <details class="project" data-year="2024">
+        <summary>
+          <div class="num">7</div>
+          <div>
+            <div class="title">NREL PI · <em>Cybersecure and Data‑Efficient Sharing Systems for Cloud‑based DER Operation and Control</em></div>
+            <div class="meta">DOE CESER · 2024–2027 · Lead: BNL · $3.84M federal · $1.04M to NREL</div>
+          </div>
+          <div class="funds">$3.84M</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> Brookhaven National Laboratory, NREL, University of Connecticut, Hitachi ABB, Google.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Develop a federated learning‑based DER control method to enhance the cybersecurity of VPP controls.</li>
+              <li>Deploy and demonstrate the federated learning‑based DER control in cloud.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2023 (1) -->
+      <details class="project" data-year="2023">
+        <summary>
+          <div class="num">8</div>
+          <div>
+            <div class="title">PI · <em>Solar‑HERO: Solar‑Assisted, Stakeholder Engaged, Autonomous Restoration with Data Orchestration</em></div>
+            <div class="meta">DOE SETO · 2023–2026 · $3M federal + $2.2M cost share · Team: NREL, Connexus Energy, United Power, GPI, ISU, CSM, Survalent, Camus Energy, EGM, NEC Labs America</div>
+          </div>
+          <div class="funds">$3M + $2.2M</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> NREL, Connexus Energy, United Power, Great Plains Institute, Iowa State University, Colorado School of Mines, Survalent Technology, Camus Energy, Electrical Grid Monitoring, and NEC Labs America.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Develop data analytics methods to quantify social and physical vulnerability of community energy system under long‑duration outages.</li>
+              <li>Develop methods to quantify community energy resilience baseline and flexibility considering social inputs.</li>
+              <li>Develop a vulnerability and equity‑informed community DER planning model.</li>
+              <li>Develop a holistic and robust resilience situational awareness method that incorporates state estimation, outage detection, topology identification, fault location, utility asset damage estimation, and DER flexibility estimation for handling extreme weather conditions by leveraging multi‑source data fusion.</li>
+              <li>Develop a multi‑stage, hierarchical service restoration model with the consideration of high penetration of DERs and building load flexibility.</li>
+              <li>Work with multiple vendor partners to install software and hardware platforms to conduct field pilot at Connexus Energy system.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2023 (2) -->
+      <details class="project" data-year="2023">
+        <summary>
+          <div class="num">9</div>
+          <div>
+            <div class="title">NREL PI · <em>Proactive: Predictive Community Outage Preparedness and Active Last Mile Visibility Feedback Autonomous Restoration</em></div>
+            <div class="meta">DOE SETO · 2023–2026 · Lead: University of Connecticut · $3M federal + $1.4M cost share · $850k to NREL</div>
+          </div>
+          <div class="funds">$3M + $1.4M</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> University of Connecticut, NREL, Eversource Energy, Cable Labs, Tantalus Inc., Utilidata.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Develop a game theory‑based method to optimally allocate energy resources to mitigate the impact of extreme events.</li>
+              <li>Develop an optimal service restoration model based on the real‑time outage prediction.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2023 (3) -->
+      <details class="project" data-year="2023">
+        <summary>
+          <div class="num">10</div>
+          <div>
+            <div class="title">PI · <em>V2X for Resilience</em></div>
+            <div class="meta">DOE Office of Electricity · 2023–2025 · $760k federal · Team: NREL</div>
+          </div>
+          <div class="funds">$760k</div>
+        </summary>
+        <div class="content">
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Model the impact of vehicle‑to‑home, vehicle‑to‑grid, and driving vehicle as a service on customer and grid resilience, considering different types of electric vehicles, travel patterns, residential load features.</li>
+              <li>Develop a software tool that quantifies the resilience benefit and cost that different types of residential customers can gain by adopting electric vehicles, as well as quantifies the economic values that distribution utilities can gain by implementing V2X programs.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2022 -->
+      <details class="project" data-year="2022">
+        <summary>
+          <div class="num">11</div>
+          <div>
+            <div class="title">PI · <em>Physics‑Informed Intelligent and Proactive Building Load Management for Energy Resilience</em></div>
+            <div class="meta">DoD ESTCP · 2022–2024 · $936k federal · Team: NREL, MCAS Miramar, University of Connecticut, Leaptran Inc.</div>
+          </div>
+          <div class="funds">$936k</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> NREL, Marine Corps Air Station Miramar, University of Connecticut, Leaptran Inc.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Developed a data‑driven building HVAC load flexibility quantification method, and designed the strategy to harness HVAC load flexibility to improve microgrid energy efficiency and resilience, in collaboration with MCAS Miramar.</li>
+              <li>Developed and demonstrated reinforcement learning‑based microgrid controller to manage on‑site generators, battery energy system, and building loads inside Miramar microgrid.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2021 (1) -->
+      <details class="project" data-year="2021">
+        <summary>
+          <div class="num">12</div>
+          <div>
+            <div class="title">PI · <em>REORG: Resilience and Stability Oriented Cellular Grid Formation and Optimization for Communities with Solar PVs and Mobile Energy Storage</em></div>
+            <div class="meta">DOE SETO · 2021–2025 · $3.725M federal + $1.99M cost share · Team: NREL, Holy Cross Energy, Minsait ACS, University of Connecticut, NRECA</div>
+          </div>
+          <div class="funds">$3.725M + $1.99M</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> NREL, Holy Cross Energy, Minsait ACS, University of Connecticut, National Rural Electric Cooperatives Association.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Developed a resilience‑oriented community microgrid planning method based on the availability of PVs, batteries, and switching devices, as well as distribution utilities’ needs on resilience.</li>
+              <li>Developed a deep reinforcement learning‑based microgrid controller to manage PVs, batteries, building loads, and EVs inside a single microgrid.</li>
+              <li>Developed a hierarchical, multi‑agent reinforcement learning‑based distributed load restoration method.</li>
+              <li>Implemented all algorithms in a commercial IoT platform, and validated the platform at NREL lab using software and hardware‑in‑the‑loop experiments.</li>
+              <li>Worked with Holy Cross Energy to develop a field deployment plan, and will lead the team to deploy the community microgrid control platform at real utility system in 2024.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2021 (2) -->
+      <details class="project" data-year="2021">
+        <summary>
+          <div class="num">13</div>
+          <div>
+            <div class="title">PI · <em>Grid‑edge intelligent distribution automation system for self‑healing distribution grids</em></div>
+            <div class="meta">DOE Office of Electricity · TCF Program · 2021–2023 · $550k federal + $550k cost share · Team: NREL, Survalent Technology</div>
+          </div>
+          <div class="funds">$550k + $550k</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> NREL and Survalent Technology.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Developed the commercialization strategy of the NREL‑developed distribution grid self‑healing algorithm, in collaboration with Survalent Technology.</li>
+              <li>Integrated NREL algorithms into Survalent’s ADMS product, and demonstrated the product FLISR performance improvement by using grid‑edge DERs (PVs, batteries, EVs, flexible building loads).</li>
+              <li>Led the team and developed a customer compensation scheme that incentives behind‑the‑meter DERs to participate into utility resilience program.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2021 (3) -->
+      <details class="project" data-year="2021">
+        <summary>
+          <div class="num">14</div>
+          <div>
+            <div class="title">PI · <em>Enhancing distribution grid resilience via advanced system and DER optimizations</em></div>
+            <div class="meta">DOE Office of Electricity · 2021 · $236k federal · Team: NREL, MPR Associates</div>
+          </div>
+          <div class="funds">$236k</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> NREL and MPR Associations.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Developed a hierarchical DER optimization model consisting of model‑predictive control and real‑time optimal power flow to improve distribution grid resilience.</li>
+              <li>Conducted utility survey on resilience and summarized the cost‑benefit results of leveraging behind‑the‑meter DERs.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2018 (1) -->
+      <details class="project" data-year="2018">
+        <summary>
+          <div class="num">15</div>
+          <div>
+            <div class="title">PI · <em>Self‑Evolving, Resilient Distribution Grids using Dynamic Network Reconfiguration and Grid Edge Intelligence</em></div>
+            <div class="meta">NREL LDRD · 2018–2020 · $500k research funds · Team: NREL</div>
+          </div>
+          <div class="funds">$500k</div>
+        </summary>
+        <div class="content">
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Developed a hierarchical model‑predictive control model that harness grid‑edge DER flexibility to contribute to distribution service restoration.</li>
+              <li>Developed a Q‑learning‑based method to quantify the impact of extreme events on distribution grids.</li>
+              <li>Developed a self‑organizing map‑based model to quantify resilience for distribution grids.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2018 (2) -->
+      <details class="project" data-year="2018">
+        <summary>
+          <div class="num">16</div>
+          <div>
+            <div class="title">Co‑PI · <em>AI‑Driven Smart Community Control for Accelerating PV Adoption and Enhancing Grid Resilience</em></div>
+            <div class="meta">DOE SETO · 2018–2021 · $3.4M federal · Team: NREL, Fort Collins Utilities, Holy Cross Energy, Thrive Home Builders, A.O. Smith</div>
+          </div>
+          <div class="funds">$3.4M</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> NREL, Fort Collins Utilities, Holy Cross Energy, Thrive Home Builders, and A.O. Smith.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Developed a model‑predictive model to quantify building load flexibility.</li>
+              <li>Developed a hierarchical control method that coordinates utility controller, community aggregators, and building energy management systems to maximize PV self‑consumption, overcome overvoltage issue, and achieve a soft microgrid operation.</li>
+              <li>Tested and demonstrated the hierarchical control on two utility system models using both software‑only and residential appliance hardware‑in‑the‑loop simulations.</li>
+              <li>Deployed the community aggregator and building energy management system at AWS cloud and used the controllers to manage DER devices inside four residential homes at Basalt, CO.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2018 (3) -->
+      <details class="project" data-year="2018">
+        <summary>
+          <div class="num">17</div>
+          <div>
+            <div class="title">PI · <em>Grid Modernization of Cooperatives and Municipal Utilities via Breakthrough System Monitoring, Control and Optimization</em></div>
+            <div class="meta">DOE (ESIF High Impact Project) &amp; Holy Cross Energy · 2018–2019 · $500k federal · Team: NREL, Holy Cross Energy, Heila Technologies</div>
+          </div>
+          <div class="funds">$500k</div>
+        </summary>
+        <div class="content">
+          <div class="teams"><span class="label">Project Team:</span> NREL, Holy Cross Energy, Heila Technologies to demonstrate NREL‑developed distributed DER control algorithms at hardware microgrid controllers and deploy the controllers at a low‑income, net‑zero energy community at Holy Cross Energy.</div>
+          <div><span class="label">NREL’s scope:</span>
+            <ol type="i">
+              <li>Created a pilot site for Holy Cross Energy to show case virtual power plant, community microgrid, and DER‑providing grid services.</li>
+              <li>The outcomes of this project received recognitions from the Colorado governor, and Holy Cross Energy and NREL leadership teams.</li>
+            </ol>
+          </div>
+        </div>
+      </details>
+
+    </section>
+
+    <footer>
+      <p>Last updated: <span id="lastUpdated"></span>. For corrections, contact me.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Build year filter pills dynamically from project data-years
+    (function(){
+      const pillsWrap = document.getElementById('yearPills');
+      const items = Array.from(document.querySelectorAll('details.project'));
+      const years = Array.from(new Set(items.map(el => el.dataset.year))).sort((a,b)=>b.localeCompare(a));
+      function pill(label, value, active=false){
+        const b = document.createElement('button');
+        b.className = 'pill' + (active?' active':'');
+        b.dataset.year = value;
+        b.textContent = label;
+        return b;
+      }
+      pillsWrap.appendChild(pill('All years','all',true));
+      years.forEach(y => pillsWrap.appendChild(pill(y,y,false)));
+    })();
+  </script>
+
+  <script>
+    // Search, filter, count, and auto-renumber
+    (function(){
+      const q = document.getElementById('q');
+      const countChip = document.getElementById('countChip');
+      const items = Array.from(document.querySelectorAll('details.project'));
+
+      function normalize(s){ return (s||'').toLowerCase().replace(/\s+/g,' ').trim(); }
+      function visibleItems(){ return items.filter(el => el.style.display !== 'none'); }
+
+      function renumber(){
+        visibleItems().forEach((el, i) => {
+          const numEl = el.querySelector('.num');
+          if (numEl) numEl.textContent = String(i + 1);
+        });
+      }
+      function recount(){
+        const vis = visibleItems().length;
+        // derive year range from DOM
+        const years = items.map(el => Number(el.dataset.year)).filter(Boolean);
+        const minY = Math.min(...years), maxY = Math.max(...years);
+        countChip.textContent = `${vis} project${vis===1?'':'s'} · ${minY}–${maxY+ (maxY===2026?2:0)}`;
+      }
+
+      function apply(){
+        const term = normalize(q.value);
+        const active = document.querySelector('.pill.active');
+        const year = active?.dataset.year || 'all';
+        items.forEach(el => {
+          const text = normalize(el.innerText);
+          const hit = !term || text.includes(term);
+          const yok = (year === 'all') || (el.dataset.year === year);
+          el.style.display = (hit && yok) ? '' : 'none';
+        });
+        renumber();
+        recount();
+      }
+
+      // Wire up search
+      q.addEventListener('input', apply);
+
+      // Delegate clicks for year pills
+      document.getElementById('yearPills').addEventListener('click', (e)=>{
+        const b = e.target.closest('.pill');
+        if (!b) return;
+        document.querySelectorAll('#yearPills .pill').forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        apply();
+      });
+
+      // Initial
+      document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' });
+      apply();
+    })();
+  </script>
+</body>
+</html>
+
