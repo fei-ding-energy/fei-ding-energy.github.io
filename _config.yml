@@ -1,23 +1,14 @@
 title: "Fei Ding"
 tagline: "AI for Grid Operations • Grid-Edge Flexibility • Resilience"
 description: "Personal academic website for Fei Ding — research, projects, publications, and talks."
-theme: minima
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-minima:
-  social_links:
-    - {"title": "Email", "url": "mailto:feidingtju@gmail.com"}
-    - {"title": "LinkedIn", "url": "https://www.linkedin.com"}
-url: ""  # set your custom domain or GitHub Pages URL later
-baseurl: ""  # typically empty for user/organization sites
-author:
-  name: "Fei Ding, Ph.D."
-  email: "feidingtju@gmail.com"
-  phone: "720-245-8064"
-  role: "Group Manager & Distinguished Member of Research Staff, NREL"
+theme: null   # we use our own theme (no remote theme)
 markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-google_analytics:  # add your GA id if you want tracking
+url: ""          # set later
+baseurl: ""      # leave empty for root
+permalink: /:categories/:title/
+collections:
+  posts:
+    output: true
+  pages:
+    output: true
+plugins: []

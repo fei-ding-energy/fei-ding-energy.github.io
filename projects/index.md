@@ -6,25 +6,27 @@ permalink: /projects/
 
 # Selected Projects
 
-### Integrated Control Room of the Future (PI)
-Trustworthy AI + advanced digital twins for next‑gen grid operations (NREL TLDRD). 2026– (multi‑year).
+<div class="grid cols-2">
+  <div class="card">
+    <h3>Integrated Control Room of the Future</h3>
+    <div class="meta">PI • Trustworthy AI, digital twins, HIL</div>
+    Next‑gen cognitive operations with human‑in‑the‑loop reinforcement learning.
+  </div>
+  <div class="card">
+    <h3>Solar‑HERO</h3>
+    <div class="meta">PI • Autonomous restoration</div>
+    Data orchestration + AI/ML for community resilience; field demonstrations.
+  </div>
+  <div class="card">
+    <h3>V2X for Resilience</h3>
+    <div class="meta">PI • Vehicle‑to‑X</div>
+    Mobile power as a service; grid support with EV fleets.
+  </div>
+  <div class="card">
+    <h3>MODERNISE</h3>
+    <div class="meta">Co‑PI • Digital twin of AES grid</div>
+    Aggregated DER flexibility for T&D operations via HIL.
+  </div>
+</div>
 
-### Grid Reliability & Resilience under Load Growth (PI)
-Techno‑economic modeling of load growth impacts and affordable mitigation strategies. 2025–2026.
-
-### Solar‑HERO (PI)
-Autonomous restoration with data orchestration and AI/ML; field demonstrations for community resilience. 2024–2026.
-
-### REORG (PI)
-Resilience‑oriented cellular grid formation; multi‑agent deep RL for autonomous microgrids. 2021–2025.
-
-### V2X for Resilience (PI)
-Holistic modeling of vehicle‑to‑home/grid and mobile power as a service. 2023–2025.
-
-### MODERNISE (Co‑PI)
-Digital twin of AES grid; aggregated DER flexibility for T&D operations via HIL. 2025–2028.
-
-### MOON (Co‑PI)
-Sensor fusion & placement under increasing T&D interdependency. 2024–2027.
-
-_For the full list (18 competitive grants; $42.6M total), see resume PDF or contact me._
+<p class="note">Full list available upon request or CV.</p>

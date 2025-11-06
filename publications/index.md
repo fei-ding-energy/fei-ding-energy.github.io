@@ -4,17 +4,31 @@ title: Papers
 permalink: /publications/
 ---
 
-# Recent & Selected Publications
+# Publications (Selected)
 
-- **Virtual Power Plants: Pilots, Challenges, and Innovations Shaping Future Development**, *IEEE Power & Energy Magazine*, 2025.
-- **Multi‑agent Hierarchical DRL for HVAC Control with Flexible DERs**, *IEEE Trans. Smart Grid*, 2025.
-- **LLM‑based Adaptive Distribution Voltage Regulation: In‑Context MPC**, *IEEE Trans. Smart Grid*, 2025.
-- **Analytic NN Gaussian Process Enabled Chance‑Constrained Voltage Regulation**, *IEEE Trans. Power Systems*, 2025.
-- **Distribution System BTM DERs: Estimation, UQ, and Control**, *IEEE Trans. Power Systems*, 2025. (Prize Paper)
-- See full publication record in the resume; a BibTeX/YAML import option can be added later.
+<div class="grid cols-2">
+  <div class="card">
+    <h3>Virtual Power Plants: Pilots & Challenges</h3>
+    <div class="meta">IEEE Power & Energy Magazine, 2025</div>
+    Overview of VPP pilots and future innovations.
+  </div>
+  <div class="card">
+    <h3>Hierarchical DRL for HVAC</h3>
+    <div class="meta">IEEE TSG, 2025</div>
+    Multi-agent DRL coordinating flexible DERs.
+  </div>
+  <div class="card">
+    <h3>LLM-based Adaptive Voltage Regulation</h3>
+    <div class="meta">IEEE TSG, 2025</div>
+    In-context MPC with LLMs for distribution voltage control.
+  </div>
+  <div class="card">
+    <h3>Chance-Constrained Voltage Regulation</h3>
+    <div class="meta">IEEE TPS, 2025</div>
+    Analytic NN + GP uncertainty for safe control.
+  </div>
+</div>
 
-## How to manage papers here
-You can:
-1. Convert your full publication list to BibTeX (or a `_data/publications.yml`).
-2. Use a small script to auto‑render the list by year and venue.
-3. Link DOIs and add badges (open‑access, code, slides).
+<p class="note">
+Want a full list by year with DOIs? I can add a BibTeX → YAML → auto-render pipeline.
+</p>

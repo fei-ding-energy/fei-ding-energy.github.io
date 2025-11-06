@@ -4,10 +4,27 @@ title: Others
 permalink: /others/
 ---
 
-# Misc
+# Others
 
-- **Professional Service:** IEEE Senior Member; Associate Editor (TSG, PEL, Solar Energy, IET GTD); multiple guest editorships; committee leadership (PSOPE awards; Task Force on AI & FMs for Distribution Grids).
-- **Collaborators:** Utilities (HCE, Xcel, Connexus, Dominion, LIPA, NYPA, etc.), OEMs/Tech (Siemens, Hitachi, Eaton, GE Vernova, Oracle, AWS, etc.), Universities & Labs (UConn, ORNL, BNL, Mines, etc.).
-- **Mentorship:** 25+ students/postdocs; visiting scholars; long‑ and short‑term mentees.
-
-If you'd like separate tabs for **Teaching**, **Service**, or **Media**, we can add them quickly.
+<div class="grid cols-2">
+  <div class="card">
+    <h3>Professional Service</h3>
+    <div class="meta">Editorial & Committees</div>
+    IEEE Senior Member; Associate Editor (TSG, PEL, Solar Energy, IET GTD); awards & task forces.
+  </div>
+  <div class="card">
+    <h3>Collaborators</h3>
+    <div class="meta">Utilities • OEMs • Labs</div>
+    HCE, Xcel, Connexus, Dominion; Siemens, Hitachi, Eaton; ORNL, BNL, Mines, and more.
+  </div>
+  <div class="card">
+    <h3>Mentorship</h3>
+    <div class="meta">Students & Postdocs</div>
+    25+ mentees; visiting scholars; long/short-term supervision.
+  </div>
+  <div class="card">
+    <h3>Media/Press</h3>
+    <div class="meta">Coming soon</div>
+    Add news coverage, podcasts, and interviews.
+  </div>
+</div>
