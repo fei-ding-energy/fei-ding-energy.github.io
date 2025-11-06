@@ -6,7 +6,7 @@ title: Home
 # Fei Ding, Ph.D.
 
 **Group Manager & Distinguished Member of Research Staff, National Renewable Energy Laboratory (NREL)**  
-Golden, CO • **Email:** [feidingtju@gmail.com](mailto:feidingtju@gmail.com) • **Phone:** 720-245-8064
+Golden, CO • **Email:** [fei.ding@nrel.gov](mailto:fei.ding@nrel.gov) •  
 
 <div class="section">
   <h2>About</h2>
