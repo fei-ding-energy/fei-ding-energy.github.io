@@ -1,0 +1,16 @@
+<nav class="site-nav">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/projects/' | relative_url }}">Projects</a>
+  <a href="{{ '/publications/' | relative_url }}">Papers</a>
+  <a href="{{ '/talks/' | relative_url }}">Talks</a>
+  <a href="{{ '/others/' | relative_url }}">Others</a>
+</nav>
+<style>
+.site-nav{ display:flex; gap:1rem; flex-wrap:wrap; margin:1rem 0;}
+.site-nav a{ text-decoration:none; border-bottom:1px solid rgba(0,0,0,.15); padding-bottom:.1rem;}
+.section{ margin: 2rem 0; }
+.badge{ display:inline-block; padding:.2rem .5rem; border:1px solid #ddd; border-radius:.5rem; font-size:.85rem; margin-right:.3rem;}
+.timeline{ border-left:2px solid #e1e1e1; padding-left:1rem; }
+.timeline .item{ margin-bottom:1rem; }
+kbd{background:#f7f7f7; border:1px solid #e2e2e2; border-radius:3px; padding:.1rem .3rem;}
+</style>

@@ -1,0 +1,63 @@
+---
+layout: default
+title: Home
+---
+
+# Fei Ding, Ph.D.
+
+**Group Manager & Distinguished Member of Research Staff, National Renewable Energy Laboratory (NREL)**  
+Golden, CO • **Email:** [feidingtju@gmail.com](mailto:feidingtju@gmail.com) • **Phone:** 720-245-8064
+
+<div class="section">
+  <h2>About</h2>
+  <p>
+  I lead a 20+ person team at NREL advancing grid modernization, trustworthy AI for control rooms,
+  DER integration, and resilience. As PI/Co-PI on $46M+ competitive DOE projects, my work spans
+  digital twins, DER orchestration, and cyber‑resilient grid operations.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Ph.D., Electrical Engineering</strong> — Case Western Reserve University, 2014</li>
+    <li><strong>M.S., Electric Power System & Automation</strong> — Tianjin University, 2010</li>
+    <li><strong>B.S., Electric Power System & Automation</strong> — Tianjin University, 2008</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Work Experience</h2>
+  <div class="timeline">
+    <div class="item">
+      <strong>Manager, Grid Automation & Controls Group</strong> — NREL (Feb 2022 – Present)<br/>
+      Manage 21 staff, ~$9.5M/yr portfolio; build partnerships; initiate programs in reliability, resilience, affordability, and cybersecurity.
+    </div>
+    <div class="item">
+      <strong>Senior Engineer & Project Team Lead</strong> — NREL (Jan 2015 – Jan 2022)<br/>
+      PI/Co‑PI on $20M+ DOE projects with utilities and industry.
+    </div>
+    <div class="item">
+      <strong>Adjunct Teaching Professor</strong> — WPI (2024– ), UConn (2023)<br/>
+      Graduate courses on DMS/ADMS and distributed & renewable generation.
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Honors & Awards</h2>
+  <p>
+  Distinguished Member of Research Staff (NREL); Best Paper Awards at IEEE PES GM (2021–2025);
+  IEEE PES Technical Committee Prize Paper Award (2025); NREL Outstanding Mentor (2023);
+  NREL Rising Star (2021); NREL President’s (2019); NREL Chairman’s (2018).
+  </p>
+</div>
+
+<div class="section">
+  <a class="badge" href="{{ '/projects/' | relative_url }}">Projects</a>
+  <a class="badge" href="{{ '/publications/' | relative_url }}">Papers</a>
+  <a class="badge" href="{{ '/talks/' | relative_url }}">Talks</a>
+  <a class="badge" href="{{ '/others/' | relative_url }}">Others</a>
+</div>
+
+> Content on this site was auto-filled from my uploaded resume. (Source available in chat.)
