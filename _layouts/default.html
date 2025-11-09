@@ -4,32 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | default: site.description }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
-  <script defer src="https://kit.fontawesome.com/7f0a3d17b1.js" crossorigin="anonymous"></script>
+  {%- seo -%}
 </head>
 <body>
-  <header class="nav">
-    <div class="nav-inner container">
-      <div class="brand"><span class="dot"></span> {{ site.title }}</div>
-      <nav class="menu">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/projects/' | relative_url }}">Projects</a>
-        <a href="{{ '/publications/' | relative_url }}">Papers</a>
-        <a href="{{ '/talks/' | relative_url }}">Talks</a>
-        <a href="{{ '/others/' | relative_url }}">Others</a>
-      </nav>
-    </div>
-  </header>
-  <main class="container">
+  <main class="page-content" aria-label="Content" style="max-width:900px;margin:0 auto;padding:1.5rem;">
+    {% include nav.html %}
     {{ content }}
+    <footer style="margin-top:3rem; font-size:.9rem; color:#666;">
+      <hr>
+      <div>© {{ site.time | date: "%Y" }} {{ site.title }}</div>
+      <div>Built with GitHub Pages & Jekyll.</div>
+    </footer>
   </main>
-  <footer class="container">
-    <hr style="border-color:var(--border)">
-    <div>© {{ site.time | date: "%Y" }} {{ site.title }} • Built on GitHub Pages</div>
-  </footer>
 </body>
 </html>
