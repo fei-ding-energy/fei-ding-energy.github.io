@@ -1,5 +1,5 @@
 :root{
-  --bg: #0b0d12;
+  /* --bg: #0b0d12;
   --bg-soft: #f2f5fa;
   --card: #ffffff;
   --text:#e6ecf3;
@@ -8,7 +8,16 @@
   --brand-2:#7ee787;
   --accent:#f5a97f;
   --ring: rgba(102,179,255,.35);
-  --border: #1f2632;
+  --border: #1f2632; */
+  --bg:#0a1a14;
+  --card:#0f241b; 
+  --text:#e4f6ee; 
+  --muted:#98c3b3;
+  --brand:#79C753; 
+  --accent:#66b3ff; 
+  --border:#1a3b2b; 
+  --lead:#cfe9de;
+
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
